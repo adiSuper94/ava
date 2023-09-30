@@ -18,3 +18,5 @@ test('throwsAsync requires native errors', async t => {
 	t.snapshot(result.stats.passed.map(({title}) => title), 'passed tests');
 	t.snapshot(result.stats.failed.map(({title}) => title), 'failed tests');
 });
+
+test.failing('known failure', t => t.fail()).because("reason: test");
